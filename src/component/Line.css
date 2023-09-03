@@ -4,7 +4,6 @@
     padding: 10px;
     border-radius: 5px;
   }
-  /* src/components/LineChart.css */
 .line-chart {
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -43,27 +42,25 @@
   height: 400px;
 }
 
-/* Customize the chart series */
 .series-line {
-  stroke-width: 2; /* Adjust line width */
+  stroke-width: 2; 
 }
 
 .series-line .symbol {
-  width: 8px; /* Adjust data point size */
-  height: 8px; /* Adjust data point size */
+  width: 8px; 
+  height: 8px; 
 }
 
-/* Customize the x-axis and y-axis */
 .axis-label {
   font-size: 14px;
 }
 
 .axis-line {
-  stroke: #ccc; /* Adjust axis line color */
+  stroke: #ccc;
 }
 
 .axis-split-line {
-  stroke: #f0f0f0; /* Adjust grid line color */
+  stroke: #f0f0f0; 
 }
 
 
