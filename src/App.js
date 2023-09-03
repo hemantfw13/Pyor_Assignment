@@ -1,4 +1,3 @@
-// src/App.js
 import React from 'react';
 import './App.css';
 import { DropdownProvider } from './context/DropdownContext';
@@ -10,8 +9,7 @@ function App() {
     <DropdownProvider>
       <div className="App">
       <Dropdown />
-
-        <Dashboard />
+      <Dashboard />
       </div>
     </DropdownProvider>
   );

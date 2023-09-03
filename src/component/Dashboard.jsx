@@ -1,4 +1,3 @@
-// src/components/Dashboard.jsx
 import React from 'react';
 import LineChart from './LineChart';
 import { useDropdown } from '../context/DropdownContext'; 

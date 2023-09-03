@@ -63,7 +63,7 @@ const LineChart = ({ selectedCoin }) => {
       show: true,
       feature: {
         saveAsImage: {
-          title: 'Save Chart as Image',
+          title: 'Save Chart',
           pixelRatio: 2, 
         },
       },
