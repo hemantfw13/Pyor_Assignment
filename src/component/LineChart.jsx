@@ -5,7 +5,7 @@ import './Line.css';
 
 const LineChart = ({ selectedCoin }) => {
   const [chartData, setChartData] = useState([]);
-  const [zoomLevel, setZoomLevel] = useState(1); 
+  const [zoomLevel, setZoomLevel] = useState(1);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,19 +44,39 @@ const LineChart = ({ selectedCoin }) => {
       type: 'category',
       data: chartData.map((data) => formatTimestamp(data[0])),
       axisLabel: {
-        interval: Math.floor(30 / zoomLevel), 
+        interval: Math.floor(30 / zoomLevel),
         rotate: 45,
+        className: 'axis-label', 
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#ccc', 
+        },
+      },
+      splitLine: {
+        lineStyle: {
+          color: '#f0f0f0', 
+        },
       },
     },
     yAxis: {
       type: 'value',
-     
     },
     series: [
       {
         data: chartData.map((data) => data[1]),
         type: 'line',
-        
+        itemStyle: {
+          normal: {
+            color: '#007bff', 
+          },
+        },
+        lineStyle: {
+          normal: {
+            width: 2, 
+          },
+        },
+        symbolSize: 8, 
       },
     ],
     toolbox: {
@@ -64,7 +84,7 @@ const LineChart = ({ selectedCoin }) => {
       feature: {
         saveAsImage: {
           title: 'Save Chart',
-          pixelRatio: 2, 
+          pixelRatio: 2,
         },
       },
     },
